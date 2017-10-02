@@ -8,15 +8,17 @@ class User {
 	private $name;
 	private $email;
 	private $password;
-    private $uv;
+    	private $uv;
 	private $nick;
+	private $test;
 
 	public function __construct($name, $email, $pass,$nick) {
 	 	$this->uv = new UserValidator();
 	 	$this->name = $name;
 		$this->setEmail($email);
 		$this->password = $pass;
-		$this->nick = $nick;		
+		$this->nick = $nick;
+		$this->test = null; // AINDA NAO TEM PROVAS, QUANDO O USUARIO E CRIADO
 	}
 
 	
@@ -52,6 +54,17 @@ class User {
     public function setNick($nick)
     {
         $this->nick = $nick;
+    }
+	
+public function getTest()
+    {
+        return $this->test;
+    }
+
+   
+    public function setTest($test)
+    {
+        $this->test = $test;
     }
 
     
